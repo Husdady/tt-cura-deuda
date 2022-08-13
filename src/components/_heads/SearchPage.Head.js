@@ -4,7 +4,7 @@ import Head from 'next/head'
 // API
 import { APP_NAME } from '@services/credentials'
 
-export default function HomePageHead() {
+export default function SearchPageHead() {
   return (
     <Head>
       <meta property="og:title" content={APP_NAME} />
@@ -14,9 +14,9 @@ export default function HomePageHead() {
       />
       <meta
         name="description"
-        content="Application that displays information about the civilizations of the Age of Empires video game"
+        content="Search for a favorite Age of Empires II Civilization"
       />
-      <title>{APP_NAME}</title>
+      <title>Search a Civilization | {APP_NAME}</title>
     </Head>
   )
 }
