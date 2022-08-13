@@ -1,0 +1,91 @@
+#my-civilization {
+  padding: 4em 6em;
+
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 3em;
+  }
+
+  .civilization {
+    &-name {
+      font-size: 4em;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    &-history {
+      line-height: 25px;
+      font-size: 1.25em;
+    }
+  }
+
+  .details {
+    padding: 1.5em 2em;
+    border: 1px dashed $text_color;
+
+    &.top {
+      width: 38%;
+    }
+
+    .title {
+      font-size: 2em;
+      margin-bottom: 18px;
+    }
+
+    span {
+      display: block;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      border-bottom: 1px dashed $text_color;
+
+      &:first-child {
+        padding-top: 0;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 901px) {
+  #my-civilization {
+    .details {
+      &.bottom {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #my-civilization {
+    padding: 2em 4em;
+
+    .wrapper {
+      margin-bottom: 0;
+    }
+
+    .details {
+      &.top {
+        display: none;
+      }
+
+      &.bottom {
+        display: block;
+        margin-top: 2em;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #my-civilization {
+    padding: 1em 2em;
+
+    .civilization {
+      &-name {
+        word-break: break-all;
+      }
+    }
+  }
+}

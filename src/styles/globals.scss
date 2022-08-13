@@ -1,0 +1,38 @@
+@import './_colors.scss';
+@import './_reset.scss';
+@import 'src/components/layouts/Header/styles.scss';
+@import 'src/components/layouts/Footer/styles.scss';
+@import 'src/components/common/Loading/styles.scss';
+@import 'src/containers/MyCivilization/styles.scss';
+@import 'src/containers/SelectCivilization/styles.scss';
+
+body {
+  font-family: 'Silkscreen', sans-serif;
+}
+
+#root {
+  min-height: 800px;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url('../../public/img/body-background.webp');
+
+  .wrap {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    background-color: $dark-opacity-75;
+  }
+
+  & > .wrapper {
+    padding-top: 64px;
+  }
+
+  .wrapper {
+    position: relative;
+    color: $text_color;
+  }
+}

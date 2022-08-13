@@ -1,0 +1,242 @@
+#select-civilization {
+  padding: 2em 3.5em;
+  box-sizing: border-box;
+
+  .title {
+    font-size: 2.5em;
+  }
+  
+  .civilizations {
+    display: grid;
+    justify-content: space-around;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    grid-gap: 30px 0px;
+    grid-template-columns: auto auto auto auto;
+
+    .civilization {
+      padding: 1em;
+      border-radius: 7px;
+      transition: all linear 1s;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      &:hover {
+        cursor: pointer;
+        box-shadow: 0px 1px 48px -5px rgba(0,0,0,0.75) inset;
+        -webkit-box-shadow: 0px 1px 48px -5px rgba(0,0,0,0.75) inset;
+        -moz-box-shadow: 0px 1px 48px -5px rgba(0,0,0,0.75) inset;
+      }
+
+      &-name {
+        margin-top: 1em;
+        text-align: center;
+      }
+
+      &.aztecs:hover {
+        background-color: $aztecs_color_hover;
+      }
+
+      &.britons:hover {
+        background-color: $britons_color_hover;
+      }
+
+      &.byzantines:hover {
+        background-color: $byzantines_color_hover;
+      }
+
+      &.celts:hover {
+        background-color: $celts_color_hover;
+      }
+
+      &.chinese:hover {
+        color: #000000;
+        background-color: $chinese_color_hover;
+      }
+
+      &.franks:hover {
+        background-color: $franks_color_hover;
+      }
+
+      &.goths:hover {
+        background-color: $goths_color_hover;
+      }
+
+      &.huns:hover {
+        background-color: $huns_color_hover;
+      }
+
+      &.japanese:hover {
+        color: #f2d79e;
+        background-color: $japanese_color_hover;
+      }
+
+      &.koreans:hover {
+        color: #f2d79e;
+        background-color: $koreans_color_hover;
+      }
+
+      &.mayans:hover {
+        background-color: $mayans_color_hover;
+      }
+
+      &.mongols:hover {
+        background-color: $mongols_color_hover;
+      }
+
+      &.persians:hover {
+        background-color: $persians_color_hover;
+      }
+
+      &.saracens:hover {
+        background-color: $saracens_color_hover;
+      }
+
+      &.spanish:hover {
+        color: #000000;
+        background-color: $spanish_color_hover;
+      }
+
+      &.teutons:hover {
+        color: #f2d79e;
+        background-color: $teutons_color_hover;
+      }
+
+      &.turks:hover {
+        background-color: $turks_color_hover;
+      }
+
+      &.vikings:hover {
+        background-color: $vikings_color_hover;
+      }
+
+      &.berbers:hover {
+        background-color: $berbers_color_hover;
+      }
+
+      &.burmese:hover {
+        background-color: $burmese_color_hover;
+      }
+
+      &.ethiopians:hover {
+        background-color: $ethiopians_color_hover;
+      }
+
+      &.incas:hover {
+        color: #ecdbdb;
+        background-color: $incas_color_hover;
+      }
+
+      &.indians:hover {
+        background-color: $indians_color_hover;
+      }
+
+      &.italians:hover {
+        color: #000000;
+        background-color: $italians_color_hover;
+      }
+
+      &.khmer:hover {
+        color: #000000;
+        background-color: $khmer_color_hover;
+      }
+
+      &.magyars:hover {
+        color: #000000;
+        background-color: $magyars_color_hover;
+      }
+
+      &.malians:hover {
+        color: #000000;
+        background-color: $malians_color_hover;
+      }
+
+      &.portuguese:hover {
+        background-color: $portuguese_color_hover;
+      }
+
+      &.slavs:hover {
+        background-color: $slavs_color_hover;
+      }
+
+      &.vietnamese:hover {
+        color: #efa211;
+        background-color: $vietnamese_color_hover;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1281px) {
+  #select-civilization {
+    .title {
+      margin-left: 2.5em;
+    }
+  }
+}
+
+@media screen and (min-width: 900px) {
+  #select-civilization {
+    .title {
+      margin-left: 2em;
+    }
+  }
+}
+
+@media screen and (max-width: 899px) {
+  #select-civilization {
+    .title {
+      margin-left: 1em;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #select-civilization {
+    .civilizations {
+      grid-template-columns: auto auto auto;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #select-civilization {
+    padding: 2em;
+
+    .title {
+      font-size: 2em;
+    }
+  }
+}
+
+@media screen and (max-width: 530px) {
+  #select-civilization {
+    .civilizations {
+      grid-template-columns: auto auto;
+
+      .civilization {
+        padding: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #select-civilization {
+    padding: 2em;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  #select-civilization {
+    .title {
+      font-size: 9vw;
+      margin-left: 1vw;
+    }
+
+    .civilizations {
+      grid-template-columns: auto;
+    }
+  }
+}

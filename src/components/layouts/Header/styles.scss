@@ -1,0 +1,91 @@
+$header_box_shadow: 1px -7px 68px 0px rgba(128,105,55,0.75) inset;
+
+header {
+  width: 100%;
+  height: 64px;
+  z-index: 9999;
+  box-sizing: border-box;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: space-between;
+  padding: .25em 4em;
+  background-color: $header_background_color;
+
+  .app-logo {
+    width: 315px;
+    min-width: 200px;
+    height: 60px;
+    position: relative;
+  }
+
+  .links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .link {
+      color: $header_icon_color;
+      margin-right: 2em;
+
+      &:hover {
+        cursor: pointer;
+        color: #ffffff;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &.civilization {
+        padding: 1em;
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  header {
+    background: linear-gradient(25deg, rgba(0,0,0,1) 0%, rgba(128,105,55,1) 20%, rgba(17,14,7,0.6643032212885154) 36%, rgba(68,54,25,1) 90%, rgba(71,58,30,1) 65%, rgba(0,0,0,.85) 100%);
+  }
+}
+
+@media screen and (max-width: 840px) {
+  header {
+    .links {
+      .link {
+        &.civilization {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  header {
+    padding: 0px 25px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  header {
+    height: auto;
+
+    .links {
+      .link {
+        margin-right: 3vw;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  header {
+    .app-logo {
+      margin-right: 7vw;
+    }
+  }
+}
