@@ -2,7 +2,7 @@
 import Head from 'next/head'
 
 // API
-import { APP_NAME } from '@services/credentials'
+import { APP_NAME } from '@utils/credentials'
 
 export default function SearchPageHead() {
   return (

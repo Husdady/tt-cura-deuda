@@ -1,3 +1,21 @@
+![alt text](https://1.bp.blogspot.com/-uIUq1E2Ta24/WpdFKrJxz-I/AAAAAAAAa7c/9xuCepfpyVMmcgtYE3XuRWTNyxAM0RbegCLcBGAs/s1600/Age-of-Empires-Definitive-Edition-Beta-Sign-Up.gif)
+
+## GUIA DE INSTALACIÓN
+Para poder ejecutar este proyecto localmente,asegurese de tener Node instalado. A continuación habra Git bash o CMD, clone el proyecto con *git clone https://github.com/Husdady/tt-cura-deuda.git*
+
+Depués que termine de clonarse el proyecto, debe instalar las dependencias con *npm install*
+
+Al finalizarse de instalarse las dependencias, cree un nuevo archiv *.env* . Agregue las siguientes variables de entorno
+- NODE_ENV="production"
+- APP_NAME="Age of Empires II"
+- PUBLIC_URL="http://localhost:3000"
+- API_URL="https://age-of-empires-2-api.herokuapp.com/api/v1"
+- AUTHOR="Husdady"
+- AUTHOR_PORTFOLIO_URL="https://husdady.netlify.com"
+- 
+
+Finalmente ejecute *npm run dev* en una terminal, ya sea Git bash o CMD y el proyecto se levantará en http://localhost:3000 . Abra su navegador favorito e ingrese a la url anteriormente mencionada y podrá ver el proyecto ejecutandose :)
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started

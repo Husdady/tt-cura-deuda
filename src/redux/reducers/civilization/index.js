@@ -1,8 +1,9 @@
+// Statics
 import { SELECT_CIVILIZATION } from '@redux/statics'
 
 const initialState = {}
 
-const my_civilization = (state = initialState, action) => {
+const civilization = (state = initialState, action) => {
   switch (action.type) {
     case SELECT_CIVILIZATION:
       return action.payload
@@ -12,4 +13,4 @@ const my_civilization = (state = initialState, action) => {
   }
 }
 
-export default my_civilization
+export default civilization

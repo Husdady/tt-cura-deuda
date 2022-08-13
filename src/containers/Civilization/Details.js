@@ -9,7 +9,7 @@ import { useSelector } from 'react-redux'
 import { isEmptyArray } from '@utils/Validations'
 
 export default function Details({ className }) {
-  const myCivilization = useSelector((store) => store.my_civilization)
+  const civilization = useSelector((store) => store.civilization)
 
   return (
     <div className={`details ${className}`}>
@@ -17,31 +17,31 @@ export default function Details({ className }) {
 
       {/* Expansión de la Civilización */}
       <span className="expansion">
-        Expansion: {myCivilization.expansion || 'Unkown'}
+        Expansion: {civilization.expansion || 'Unkown'}
       </span>
 
       {/* Tipo de ejército de la Civilización */}
       <span className="army-type">
         Army type:{' '}
-        {myCivilization.army_type ||
-          `The Army type of The ${myCivilization.name} Civilization Army is unkown`}
+        {civilization.army_type ||
+          `The Army type of The ${civilization.name} Civilization Army is unkown`}
       </span>
 
       {/* Bono de equipo */}
       <span className="team-bonus">
         Team bonus:{' '}
-        {myCivilization.team_bonus ||
-          `The Team bonus of The ${myCivilization.name} Civilization Army is unkown`}
+        {civilization.team_bonus ||
+          `The Team bonus of The ${civilization.name} Civilization Army is unkown`}
       </span>
 
       {/* Bono de equipo */}
       <span className="civilization-bonus">
-        {!isEmptyArray(myCivilization.civilization_bonus) ? (
+        {!isEmptyArray(civilization.civilization_bonus) ? (
           <Fragment>
-            Civilization bonus: {myCivilization.civilization_bonus.join(', ')}
+            Civilization bonus: {civilization.civilization_bonus.join(', ')}
           </Fragment>
         ) : (
-          `The ${myCivilization.name} does not have bonus`
+          `The ${civilization.name} does not have bonus`
         )}
       </span>
     </div>

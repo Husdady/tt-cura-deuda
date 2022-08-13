@@ -4,13 +4,29 @@ import { useCallback, memo } from 'react'
 // Librarys
 import Image from 'next/image'
 import { withRouter } from 'next/router'
-import PropTypes from 'prop-types'
 import { useDispatch } from 'react-redux'
+import PropTypes from 'prop-types'
 
-// Redux
+// Actions
 import actions from '@redux/actions'
 
+// Utils
+import Helper from '@utils/Helper'
+import { isArray } from '@utils/Validations'
+
+const civilizations = require('@public/data/civilizations.json')
+
 function Civilization({ name, router, ...props }) {
+  // Encontrar la actual civilización
+  const civilizationFound = civilizations.find(
+    (civilization) => civilization.civilizationId === props.id
+  )
+
+  // Obtener la historia de la actual civilización
+  const history = isArray(civilizationFound.history)
+    ? civilizationFound.history[1]
+    : civilizationFound.history
+
   const cvzName = name.toLowerCase() // Nombre de la civilización a minusculas
   const emblem = require('@public/img/civilizations/' + cvzName + '.webp') // Obtener el emblema de la civilización
   const dispatch = useDispatch() // Uso de dispatch
@@ -29,7 +45,7 @@ function Civilization({ name, router, ...props }) {
     // Seleccionar una civilización
     selectCivilization(civilization)
 
-    router.push('/my-civilization')
+    router.push(`/civilizations/${cvzName}`)
   }, [])
 
   return (
@@ -50,6 +66,7 @@ function Civilization({ name, router, ...props }) {
       />
 
       <h2 className="civilization-name">{name}</h2>
+      <p className="civilization-history">{Helper.truncate(history, 140)}</p>
     </article>
   )
 }

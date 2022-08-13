@@ -2,15 +2,13 @@
 import { combineReducers } from 'redux'
 
 // Reducers
-import username from './username'
+import civilization from './civilization'
 import civilizations from './civilizations'
-import my_civilization from './my_civilization'
 
 // Definir reducers
 const reducers = combineReducers({
-  username: username,
-  civilizations: civilizations,
-  my_civilization: my_civilization
+  civilization: civilization,
+  civilizations: civilizations
 })
 
 export default reducers

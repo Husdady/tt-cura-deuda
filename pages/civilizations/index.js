@@ -5,7 +5,7 @@ import MainContainer from '@containers/MainContainer'
 import { HomePageHead } from '@heads'
 import SelectCivilizationContainer from '@root/src/containers/SelectCivilization'
 
-export default function HomePage() {
+export default function CivilizationPage() {
   return (
     <MainContainer head={<HomePageHead />}>
       <SelectCivilizationContainer />

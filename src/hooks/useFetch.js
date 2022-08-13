@@ -10,7 +10,7 @@ import { isString } from '@utils/Validations'
 import useMounted from './useMounted'
 
 // Services
-import { PUBLIC_URL } from '@services/credentials'
+import { PUBLIC_URL } from '@root/src/utils/credentials'
 
 const extraDataProps = {
   callback: null,

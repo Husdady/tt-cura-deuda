@@ -8,7 +8,7 @@ import reducers from './reducers'
 import storage from './async-storage'
 
 // Services
-import { NODE_ENV } from '@services/credentials'
+import { NODE_ENV } from '@root/src/utils/credentials'
 
 const isProductionMode = NODE_ENV === 'production'
 

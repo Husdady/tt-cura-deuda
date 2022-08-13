@@ -2,7 +2,7 @@
 import { Fragment } from 'react'
 
 // Services
-import { APP_NAME } from '@services/credentials'
+import { APP_NAME } from '@root/src/utils/credentials'
 
 // Apple favicons
 const faviconAppleIcon57x57 = require('@public/apple-icon-57x57.png')
@@ -109,7 +109,7 @@ export default function FaviconHeader() {
       ))}
 
       <link rel="manifest" href="./manifest.json"></link>
-      <link rel="shortcut icon" href={defaultFavicon} />
+      <link rel="shortcut icon" href={defaultFavicon}></link>
       <title>{APP_NAME}</title>
     </Fragment>
   )

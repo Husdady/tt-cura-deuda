@@ -1,0 +1,7 @@
+[
+  {
+    "source": "/",
+    "destination": "/civilizations",
+    "permanent": true
+  }
+]

@@ -5,7 +5,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { isEmptyObject } from '@root/src/utils/Validations'
 
 export default function HeaderLinks() {
-  const myCivilization = useSelector((store) => store.my_civilization)
+  // Obtener la civilización seleccionada
+  const myCivilization = useSelector((store) => store.civilization)
 
   // Nombre de la civilización a minusculas
   const cvzName = !isEmptyObject(myCivilization)

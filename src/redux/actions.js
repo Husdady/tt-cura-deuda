@@ -3,14 +3,6 @@ import * as statics from '@redux/statics'
 
 export default function actions(dispatch) {
   return {
-    // Actualizar el nombre del usuario
-    changeUsername: (newUsername) => {
-      return dispatch({
-        type: statics.CHANGE_USERNAME,
-        payload: newUsername
-      })
-    },
-
     // Seleccionar una civilización
     selectCivilization: (civilization) => {
       return dispatch({

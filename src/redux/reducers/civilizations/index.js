@@ -1,3 +1,4 @@
+// Statics
 import { SAVE_CIVILIZATIONS } from '@redux/statics'
 
 const initialState = []

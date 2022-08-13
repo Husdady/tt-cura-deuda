@@ -12,7 +12,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import useFetch from '@hooks/useFetch'
 
 // Services
-import { PUBLIC_URL } from '@services/credentials'
+import { APP_NAME, PUBLIC_URL } from '@root/src/utils/credentials'
 
 // Redux
 import actions from '@redux/actions'
@@ -25,7 +25,7 @@ const Civilization = dynamic(() => import('./Civilization'), {
 })
 
 export default function Civilizations() {
-  const dispatch = useDispatch() // Obtener accion que guarda las civilizaciones
+  const dispatch = useDispatch() // Obtener dispatch
   const cvlz = useSelector((store) => store.civilizations) // Obtener civilizaciones
 
   const { errors, isLoading } = useFetch(`${PUBLIC_URL}/api/civilizations`, {
@@ -57,7 +57,7 @@ export default function Civilizations() {
 
   return (
     <Fragment>
-      <h1 className="title">Select a Civilization:</h1>
+      <h1 className="title">{APP_NAME} Civilizations availables:</h1>
 
       <section className="civilizations">
         {cvlz.map((civilization) => (

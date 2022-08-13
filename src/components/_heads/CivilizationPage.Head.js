@@ -2,9 +2,12 @@
 import Head from 'next/head'
 
 // API
-import { APP_NAME } from '@services/credentials'
+import { APP_NAME } from '@root/src/utils/credentials'
 
-export default function MyCivilizationHead() {
+// Librarys
+import PropTypes from 'prop-types'
+
+export default function CivilizationHead({ name }) {
   return (
     <Head>
       <meta property="og:title" content={APP_NAME} />
@@ -16,7 +19,13 @@ export default function MyCivilizationHead() {
         name="description"
         content="My favorite Age of Empires II Civilization"
       />
-      <title>My Civilization | {APP_NAME}</title>
+      <title>
+        {name} Civilization | {APP_NAME}
+      </title>
     </Head>
   )
+}
+
+CivilizationHead.propTypes = {
+  name: PropTypes.string.isRequired
 }

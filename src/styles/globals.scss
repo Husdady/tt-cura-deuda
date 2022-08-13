@@ -2,8 +2,9 @@
 @import './_reset.scss';
 @import 'src/components/layouts/Header/styles.scss';
 @import 'src/components/layouts/Footer/styles.scss';
+@import 'src/components/common/Error/styles.scss';
 @import 'src/components/common/Loading/styles.scss';
-@import 'src/containers/MyCivilization/styles.scss';
+@import 'src/containers/Civilization/styles.scss';
 @import 'src/containers/SelectCivilization/styles.scss';
 
 body {
@@ -13,10 +14,23 @@ body {
 #root {
   min-height: 800px;
   position: relative;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-image: url('../../public/img/body-background.webp');
+  overflow: hidden;
+
+  &::before {
+    content: ' ';
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #000000;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url('../../public/img/body-background.webp');
+    will-change: transform;
+    z-index: -1;
+  }
 
   .wrap {
     position: absolute;

@@ -2,7 +2,7 @@
 import Image from 'next/image'
 
 // Services
-import { APP_NAME } from '@services/credentials'
+import { APP_NAME } from '@root/src/utils/credentials'
 
 const logo = require('@public/img/age-of-empires-logo.webp')
 

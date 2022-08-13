@@ -1,5 +1,5 @@
 // Services
-import { AUTHOR, AUTHOR_PORTFOLIO_URL } from '@services/credentials'
+import { AUTHOR, AUTHOR_PORTFOLIO_URL } from '@root/src/utils/credentials'
 
 export default function Author() {
   return (

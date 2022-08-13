@@ -2,6 +2,13 @@
 import FaviconHead from './Favicon.Head'
 import HomePageHead from './HomePage.Head'
 import SearchPageHead from './SearchPage.Head'
-import MyCivilizationPageHead from './MyCivilizationPage.Head'
+import CivilizationPageHead from './CivilizationPage.Head'
+import ErrorPageHead from './ErrorPage.Head'
 
-export { FaviconHead, HomePageHead, SearchPageHead, MyCivilizationPageHead }
+export {
+  FaviconHead,
+  ErrorPageHead,
+  HomePageHead,
+  SearchPageHead,
+  CivilizationPageHead
+}
