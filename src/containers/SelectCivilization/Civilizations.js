@@ -42,8 +42,6 @@ export default function Civilizations() {
     }
   })
 
-  console.log('[isLoading]', isLoading)
-
   // Está solicitando los datos de la API
   if (isLoading) {
     return <Loading />

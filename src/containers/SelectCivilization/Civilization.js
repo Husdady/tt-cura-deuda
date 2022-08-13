@@ -32,8 +32,6 @@ function Civilization({ name, router, ...props }) {
     router.push('/my-civilization')
   }, [])
 
-  console.log('[props]', props)
-
   return (
     <article
       onClick={handleSelectCivilization}
